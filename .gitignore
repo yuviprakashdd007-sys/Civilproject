@@ -1,0 +1,16 @@
+# Ignore everything by default
+*
+
+# But include these specific files
+!index.html
+!script.js
+!style.css
+
+# Include image assets
+!*.png
+!*.jpg
+!*.jpeg
+!*.webp
+
+# Don't ignore .gitignore itself
+!.gitignore
