@@ -210,21 +210,60 @@ nav a:hover {
     color: var(--primary);
 }
 
-.section-header p {
-    color: var(--text-grey);
+/* Who We Are Section - Text left, Image right */
+#who-we-are .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+#who-we-are .text-content p {
     font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-grey);
+}
+
+#who-we-are .feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+#who-we-are .feature-list li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#who-we-are .feature-list i {
+    color: var(--primary);
+}
+
+#who-we-are .image-content {
+    position: relative;
+    margin: 0;
+}
+
+#who-we-are .image-content img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
 }
 
-.feature-list {
-    list-style: none;
-    margin-top: 20px;
+.text-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-grey);
 }
 
 .feature-list li {
@@ -280,23 +319,15 @@ nav a:hover {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 50px;
+    gap: 30px;
 }
 
 .gallery-item {
     position: relative;
+    height: 300px;
+    border-radius: 10px;
     overflow: hidden;
-    border-radius: 12px;
     cursor: pointer;
-    height: 280px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 15px 35px rgba(255, 193, 7, 0.4);
 }
 
 .gallery-item img {
@@ -395,7 +426,8 @@ nav a:hover {
 }
 
 .product-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .product-img-container {
@@ -408,7 +440,13 @@ nav a:hover {
 }
 
 .floating-img {
+    max-width: 150px;
+    max-height: 150px;
     animation: float 6s ease-in-out infinite;
+}
+
+.delay-1 {
+    animation-delay: 1s;
 }
 
 @keyframes float {
@@ -421,6 +459,12 @@ nav a:hover {
     50% {
         transform: translateY(-20px);
     }
+}
+
+.icon-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-placeholder i {
@@ -579,7 +623,8 @@ footer {
     }
 
     .content-grid,
-    .cards-grid {
+    .cards-grid,
+    #who-we-are .content-grid {
         grid-template-columns: 1fr;
     }
 
